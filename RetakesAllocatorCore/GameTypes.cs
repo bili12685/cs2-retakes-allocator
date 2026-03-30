@@ -22,7 +22,8 @@ public enum CsItem
     [EnumMember(Value = "weapon_knife")] DefaultKnifeCT = 42,
     KnifeCT = DefaultKnifeCT,
 
-    [EnumMember(Value = "weapon_glock")] Glock = 200,
+    [EnumMember(Value = "weapon_glock")] Glock18 = 200,
+    Glock = Glock18,
     [EnumMember(Value = "weapon_p250")] P250 = 201,
     [EnumMember(Value = "weapon_cz75a")] CZ = 202,
     [EnumMember(Value = "weapon_elite")] Dualies = 203,
@@ -59,7 +60,8 @@ public enum CsItem
     [EnumMember(Value = "weapon_m4a1_silencer")] M4A1S = 283,
     [EnumMember(Value = "weapon_ak47")] AK47 = 284,
     [EnumMember(Value = "weapon_galilar")] Galil = 285,
-    [EnumMember(Value = "weapon_sg556")] Krieg = 286,
+    [EnumMember(Value = "weapon_sg556")] SG553 = 286,
+    Krieg = SG553,
 
     [EnumMember(Value = "weapon_m249")] M249 = 300,
     [EnumMember(Value = "weapon_negev")] Negev = 301,
@@ -75,24 +77,24 @@ public enum CsItem
 
 public static class ChatColors
 {
-    public const string Green = "";
-    public const string Red = "";
-    public const string Yellow = "";
-    public const string Blue = "";
-    public const string Purple = "";
-    public const string Orange = "";
-    public const string White = "";
-    public const string Grey = "";
-    public const string LightRed = "";
-    public const string LightBlue = "";
-    public const string LightPurple = "";
-    public const string LightYellow = "";
-    public const string DarkRed = "";
-    public const string DarkBlue = "";
-    public const string BlueGrey = "";
-    public const string Olive = "";
-    public const string Lime = "";
-    public const string Gold = "";
-    public const string Silver = "";
-    public const string Magenta = "";
+    public const string Green = "{Green}";
+    public const string Red = "{Red}";
+    public const string Yellow = "{Yellow}";
+    public const string Blue = "{Blue}";
+    public const string Purple = "{Purple}";
+    public const string Orange = "{Orange}";
+    public const string White = "{White}";
+    public const string Grey = "{Grey}";
+    public const string LightRed = "{LightRed}";
+    public const string LightBlue = "{LightBlue}";
+    public const string LightPurple = "{LightPurple}";
+    public const string LightYellow = "{LightYellow}";
+    public const string DarkRed = "{DarkRed}";
+    public const string DarkBlue = "{DarkBlue}";
+    public const string BlueGrey = "{BlueGrey}";
+    public const string Olive = "{Olive}";
+    public const string Lime = "{Lime}";
+    public const string Gold = "{Gold}";
+    public const string Silver = "{Silver}";
+    public const string Magenta = "{Magenta}";
 }

@@ -254,6 +254,8 @@ public static class WeaponHelpers
     private static readonly Dictionary<CsItem, string> _weaponNameOverrides = new()
     {
         {CsItem.M4A4, "M4A4"},
+        {CsItem.Glock, "Glock18"},
+        {CsItem.Krieg, "SG553"},
     };
 
     public static List<WeaponAllocationType> WeaponAllocationTypes =>
