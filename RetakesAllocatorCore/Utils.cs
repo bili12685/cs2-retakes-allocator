@@ -1,5 +1,5 @@
 ﻿using System.Runtime.Serialization;
-using CounterStrikeSharp.API.Modules.Utils;
+using RetakesAllocatorCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace RetakesAllocatorCore;

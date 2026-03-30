@@ -9,12 +9,17 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="CounterStrikeSharp.API" Version="1.0.329" />
-        <PackageReference Include="RetakesPluginShared" Version="2.0.0" />
-    </ItemGroup>
+                    </ItemGroup>
 
     <ItemGroup>
         <ProjectReference Include="..\RetakesAllocatorCore\RetakesAllocatorCore.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Compile Remove="Menus\**\*.cs" />
+        <Compile Remove="Managers\**\*.cs" />
+        <Compile Remove="Helpers.cs" />
+        <Compile Remove="CustomGameData.cs" />
     </ItemGroup>
 
     <Target Name="PostBuild" AfterTargets="PostBuildEvent" Condition=" '$(CopyPath)' != '' and $(Configuration) == 'Debug' and '$(OS)' == 'Windows_NT'">

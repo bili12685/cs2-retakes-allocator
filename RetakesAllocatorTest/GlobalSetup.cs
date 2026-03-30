@@ -1,4 +1,4 @@
-using CounterStrikeSharp.API.Core.Translations;
+using RetakesAllocatorCore;
 using RetakesAllocatorCore;
 using RetakesAllocatorCore.Config;
 using RetakesAllocatorCore.Db;
