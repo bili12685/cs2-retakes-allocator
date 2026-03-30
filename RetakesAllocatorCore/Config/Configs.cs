@@ -51,8 +51,16 @@ public static class Configs
         _configFilePath = Path.Combine(configFileDirectory, ConfigFileName);
         if (File.Exists(_configFilePath))
         {
-            _configData =
-                JsonSerializer.Deserialize<ConfigData>(File.ReadAllText(_configFilePath), SerializationOptions);
+            try
+            {
+                _configData =
+                    JsonSerializer.Deserialize<ConfigData>(File.ReadAllText(_configFilePath), SerializationOptions);
+            }
+            catch (Exception e)
+            {
+                Log.Warn($"Failed to deserialize existing config, regenerating defaults: {e.Message}");
+                _configData = new ConfigData();
+            }
         }
         else
         {

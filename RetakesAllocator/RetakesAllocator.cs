@@ -1,3 +1,5 @@
+using Microsoft.Extensions.Logging;
+using RetakesAllocatorCore.Db;
 using SwiftlyS2.Shared;
 using SwiftlyS2.Shared.Plugins;
 using RetakesAllocatorCore;
@@ -5,7 +7,7 @@ using RetakesAllocatorCore.Config;
 
 namespace RetakesAllocator;
 
-[PluginMetadata(Id = "sw2.retakesallocator", Version = PluginInfo.Version, MinimumAPIVersion = "1.1.6")]
+[PluginMetadata(Id = "sw2.retakesallocator", Version = PluginInfo.Version, Name = "RetakesAllocator", Author = "bili12685", Description = "SwiftlyS2 retakes allocator plugin")]
 public class RetakesAllocatorPlugin : BasePlugin
 {
     public RetakesAllocatorPlugin(ISwiftlyCore core) : base(core)
@@ -23,7 +25,7 @@ public class RetakesAllocatorPlugin : BasePlugin
 
         if (Configs.GetConfigData().MigrateOnStartup)
         {
-            Db.Queries.Migrate();
+            Queries.Migrate();
         }
 
         Core.Logger.LogInformation("{Prefix}Loaded (SwiftlyS2 destructive migration mode)", PluginInfo.LogPrefix);
@@ -31,7 +33,7 @@ public class RetakesAllocatorPlugin : BasePlugin
 
     public override void Unload()
     {
-        Db.Queries.Disconnect();
+        Queries.Disconnect();
         Core.Logger.LogInformation("{Prefix}Unloaded", PluginInfo.LogPrefix);
     }
 }

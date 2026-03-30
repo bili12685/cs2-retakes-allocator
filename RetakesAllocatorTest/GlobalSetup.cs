@@ -1,5 +1,4 @@
 using RetakesAllocatorCore;
-using RetakesAllocatorCore;
 using RetakesAllocatorCore.Config;
 using RetakesAllocatorCore.Db;
 
@@ -11,6 +10,10 @@ public class GlobalSetup
     [OneTimeSetUp]
     public void Setup()
     {
+        if (File.Exists("./config/config.json"))
+        {
+            File.Delete("./config/config.json");
+        }
         Configs.Load(".", true);
         Queries.Migrate();
         Translator.Initialize(new JsonStringLocalizer("../../../../RetakesAllocator/lang"));

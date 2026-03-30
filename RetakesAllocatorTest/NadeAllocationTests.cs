@@ -1,7 +1,5 @@
 ﻿using System.Collections;
 using RetakesAllocatorCore;
-using RetakesAllocatorCore;
-using RetakesAllocatorCore;
 
 namespace RetakesAllocatorTest;
 
