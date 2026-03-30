@@ -1,7 +1,6 @@
 using System.Text.Json;
 using System.Text.Json.Serialization;
-using CounterStrikeSharp.API.Modules.Entities.Constants;
-using CounterStrikeSharp.API.Modules.Utils;
+using RetakesAllocatorCore;
 using Microsoft.Extensions.Logging;
 
 namespace RetakesAllocatorCore.Config;
@@ -52,8 +51,16 @@ public static class Configs
         _configFilePath = Path.Combine(configFileDirectory, ConfigFileName);
         if (File.Exists(_configFilePath))
         {
-            _configData =
-                JsonSerializer.Deserialize<ConfigData>(File.ReadAllText(_configFilePath), SerializationOptions);
+            try
+            {
+                _configData =
+                    JsonSerializer.Deserialize<ConfigData>(File.ReadAllText(_configFilePath), SerializationOptions);
+            }
+            catch (Exception e)
+            {
+                Log.Warn($"Failed to deserialize existing config, regenerating defaults: {e.Message}");
+                _configData = new ConfigData();
+            }
         }
         else
         {

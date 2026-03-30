@@ -1,7 +1,5 @@
 using System.Collections;
-using CounterStrikeSharp.API.Modules.Admin;
-using CounterStrikeSharp.API.Modules.Entities.Constants;
-using CounterStrikeSharp.API.Modules.Utils;
+using RetakesAllocatorCore;
 using RetakesAllocatorCore.Config;
 using RetakesAllocatorCore.Db;
 
@@ -256,6 +254,8 @@ public static class WeaponHelpers
     private static readonly Dictionary<CsItem, string> _weaponNameOverrides = new()
     {
         {CsItem.M4A4, "M4A4"},
+        {CsItem.Glock, "Glock18"},
+        {CsItem.Krieg, "SG553"},
     };
 
     public static List<WeaponAllocationType> WeaponAllocationTypes =>

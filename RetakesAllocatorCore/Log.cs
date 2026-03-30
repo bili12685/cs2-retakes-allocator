@@ -1,4 +1,4 @@
-﻿using CounterStrikeSharp.API.Modules.Utils;
+﻿using RetakesAllocatorCore;
 using Microsoft.Extensions.Logging;
 using RetakesAllocatorCore.Config;
 

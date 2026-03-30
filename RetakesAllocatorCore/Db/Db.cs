@@ -1,5 +1,4 @@
-using CounterStrikeSharp.API.Modules.Entities.Constants;
-using CounterStrikeSharp.API.Modules.Utils;
+using RetakesAllocatorCore;
 using Microsoft.EntityFrameworkCore;
 using RetakesAllocatorCore.Config;
 

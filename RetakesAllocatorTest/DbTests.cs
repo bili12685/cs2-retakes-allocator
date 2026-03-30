@@ -1,5 +1,3 @@
-using CounterStrikeSharp.API.Modules.Entities.Constants;
-using CounterStrikeSharp.API.Modules.Utils;
 using RetakesAllocatorCore;
 using RetakesAllocatorCore.Db;
 using static RetakesAllocatorTest.TestConstants;
